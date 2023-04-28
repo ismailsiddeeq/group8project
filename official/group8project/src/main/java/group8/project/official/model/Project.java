@@ -15,9 +15,9 @@ public class Project {
 
     private int employerId;
 
-    private int employeeId;
-
     private int taskId;
+
+    private String taskName;
 
     public int getId() {
         return id;
@@ -35,14 +35,6 @@ public class Project {
         this.employerId = employerId;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
     public int getTaskId() {
         return taskId;
     }
@@ -51,16 +43,11 @@ public class Project {
         this.taskId = taskId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Project project = (Project) o;
-        return id == project.id && employerId == project.employerId && employeeId == project.employeeId && taskId == project.taskId;
+    public String getTaskName() {
+        return taskName;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, employerId, employeeId, taskId);
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 }
